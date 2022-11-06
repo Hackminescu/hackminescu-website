@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/Eminescu.ico" type="image/x-icon">
+    <title>Hackminescu Login</title>
+</head>
+<body>
+    <a id="link" href="../homepage/main.html" ><img id="logo" src="assets/logo.png"></a>
+    <div class="body">
+        <div class="container">
+            <div class="box">
+            <div class="slider signin">
+                <h2>Vrei sa urmaresti evenimentul ?</h2>
+                <button class="b-signin">Înregistrare</button>
+            </div>
+            <div class="slider signup">
+                <h2>Vrei sa participi?</h2>
+                <button class="b-signup">Participa</button>
+            </div>
+        </div>
+        <div class="formular">
+        <div class="form signinForm">
+            <form action="/urm" method="post">
+                <h3>Urmareste</h3><br>
+                <input type="text" placeholder="Numele tau">                                            
+                <input type="text" placeholder="Clasa">                                            
+                <input type="email" placeholder="Email">
+                <input type="submit" value="Înregistrare">
+                <a id="join-us1" href="#staff">Vrei sa ni te alaturi?</a>
+            </form>
+        </div>
+        <div class="form signupForm">
+            <form action="/part" method="post">
+                <h3>Participa</h3><br>
+                <input type="text" autocomplete="off" placeholder="Numele echipei">
+                <input type="text" placeholder="Clasa">  
+                <input type="number" name="quantity" min="1" max="4" placeholder="Numarul de coechipieri (max 4)">
+                <input type="text" autocomplete="off" placeholder="Numele participantilor">
+                <input type="email" autocomplete="off" placeholder="Adresă de email">
+                <input type="submit"  value="Înregistrare">
+                <a id="join-us2" href="#staff">Vrei sa ni te alaturi?</a>
+            </form>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -16,7 +16,7 @@ const animatie = () =>{
         meniu.classList.toggle('toggle');
    });
 }
-var countDownDate = new Date("Jan 5, 2023 18:00:00").getTime();
+var countDownDate = new Date("Nov 27, 2022 18:00:00").getTime();
 
 var x = setInterval(function() {
 
@@ -33,7 +33,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-  document.getElementById("timer").innerHTML = "Starts in: " + days + "D " + hours + "H "
+  document.getElementById("timer").innerHTML = "Starts in: <br> " + days + "D " + hours + "H "
   + minutes + "M " + seconds + "S ";
 
 
