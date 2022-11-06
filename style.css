@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Nova+Mono&display=swap');
 * {
     margin:0px;
@@ -18,7 +20,7 @@
             background: linear-gradient(-45deg, #ffa600, #ee7752, #ee7752, #111b30,#1cc2ff, #1cc2ff);
 	        background-size: 400% 400%;
 	        animation: gradient 15s ease infinite;
-            font-family: 'Nova Mono', monospace;
+
     }
     @keyframes gradient {
         0% {
@@ -37,7 +39,6 @@
         align-items: center;
         min-height: 8vh;
         background-color:#111b30;
-        font-family: 'Quicksand', sans-serif;
         color:rgb(0, 130, 139);
         position: sticky;
         top: 0; 
@@ -73,7 +74,6 @@
         display: flex;
         justify-content: space-around;
         width:35%;
-
     }
     .nav-links li {
         list-style: none;
@@ -110,6 +110,7 @@
         flex-direction:column;
         text-align: center;
         padding: 10px;
+        font-family: 'Nova Mono', monospace;
     
         }
         .dot {
@@ -117,6 +118,12 @@
             width: 35px;
             border-radius: 50%;
             display: inline-block;
+          }
+
+          #timer{
+            font-size: 4vh;
+            font-family: 'Silkscreen', cursive;
+            color: #111b30 ;
           }
     @media screen and (max-width:1024px){
         .nav-links{
