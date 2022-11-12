@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/Eminescu.ico" type="image/x-icon">
-    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/HM.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <title>HACKMINESCU</title>
 </head>
+
 <body>
 
+
+
     <nav>
-      <div class="logo">
-      <a href="main.html" ><img id="logo2" src="assets/logo.png"></a>
-
-
-        <h4 id="lp"></h4>
-        </div>
-
-     <ul class="nav-links">
-        <li>
-            <a href="../login/login.html">Inscrie-te</a>
-        </li>
-        <li>
-            <a href="comming_soon.html">Despre noi</a>
-        </li>
-        </ul>
-
-        <div class="meniu">
-        <div class="sus"></div>
-        <div class="mijloc"></div>
-        <div class="jos"></div>
-        </div>
+        <picture id="pic1">
+            <img id="logo" src="assets/logo.png" alt="LOGO" />
+        </picture>
     </nav>
-<article>
-    
-<p id="timer"></p>
-</article>
-    
-<footer class="ian-gras">
-    <p><b>HACKMINESCU© </b>since 2022. </b></p>
-      <p> All rights reserverd.</p>
-    <p>Eveniment organizat de<br> Colegiul National <i></i>Mihai Eminescu</i></p>    
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
 
+
+
+
+    <main>
+        <div class="container">
+            <h1>Ce este HACKMINESCU?</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero, reprehenderit beatae sapiente expedita, consectetur
+                cupiditate quod eaque quisquam quidem fugit aliquid a cum?
+                Vel quisquam voluptatem laborum fuga provident quos.
+            </p>
+        </div>
+
+
+
+        <article>
+            <h1>Desfasurarea envenimentului</h1>
+            <div class="event"><p id="timer"></p></div>
+            <div class="event"><p>Proiectele pot fi inregistrate pana pe (7zile inainte de incepere)</p></div>
+            <div class="event"><p>DE ALES ALT FONT OK?</p></div>
+
+            <p id="FAQ">FAQ</p>
+            <div class="event"><p><b>Ce tip de proiecte pot fi inscrise ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
+            <div class="event"><p><b>Intrebari frecvente 2 ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
+            <div class="event"><p><b>Intrebari frecvente 3 ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
+            <div class="event"></div>
+        </article>
+
+
+
+        <form class="container">
+            <legend>Vreau sa imi prezint proiectul!</legend>
+
+            <div class="container1">
+                <div class="align"><input type="text" placeholder="Participantul 1"><img class="add_form_field"
+                        id="icon" src="assets/plus.svg"></div>
+            </div>
+            <div class="in-line">
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="clasa" type="text" placeholder="Clasa" required>
+            </div>
+            <div class="margin">
+                <input id="telefon" type="tel" placeholder="Numar de telefon" required>
+                <input id="proiect" type="text" placeholder="Nume proiect" required>
+                <textarea id="descriere" cols="48" rows="3"></textarea>
+            </div>
+            <input type="submit" value="Inscrie-te!">
+        </form>
+
+
+
+        <form class="container">
+            <legend>Vreau sa imi sustin colegii!</legend>
+            <div class="in-line">
+                <input id="sustinator" type="text" placeholder="Numele tau" required>
+                <input id="suporter" type="submit" value="Sustine!">
+            </div>
+        </form>
+    </main>
+
+
+
+    <footer>
+        <p><b>HACKMINESCU© </b>since 2022.</p>
+        <p>All rights reserverd.</p>
+        <p>Eveniment organizat de<br />Colegiul National <i>Mihai Eminescu</i></p>
+    </footer>
+
+
+
+</body>
+
+</html>

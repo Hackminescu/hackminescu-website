@@ -1,181 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nova+Mono&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Nova+Mono&display=swap');
 * {
-    margin:0px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    }
-    html,body {
-            overflow-x:hidden;
-            width: 100%;
-            height: 100%;
-            transform: translate3d(0,0,0);
-            margin:0px;
-            padding: 0px;
-            background: linear-gradient(-45deg, #ffa600, #ee7752, #ee7752, #111b30,#1cc2ff, #1cc2ff);
-	        background-size: 400% 400%;
-	        animation: gradient 15s ease infinite;
+}
 
-    }
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    nav {
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        min-height: 8vh;
-        background-color:#111b30;
-        color:rgb(0, 130, 139);
-        position: sticky;
-        top: 0; 
-        width: 100%;
-        padding: 10px;
-    }
-    #baranav{
-        top:0px;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+
+    background: linear-gradient(
+        -45deg,
+        #ffa600,
+        #ee7752,
+        #ee7752,
+        #111b30,
+        #1cc2ff,
+        #1cc2ff
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
     }
 
-    .logo{
-       
-        color: rgb(255, 123, 0);
-        text-transform: uppercase;
-        letter-spacing: 3px;
-
-        display: flex;
+    50% {
+        background-position: 100% 50%;
     }
 
-    #logo2{
-        max-height: 40px;
+    100% {
+        background-position: 0% 50%;
     }
+}
 
-    #lp{
-        font-size: 40px;
-        padding-left: 10px;
-        font-family: 'Megrim', cursive;
-    }
-    .nav-links{
-        display: flex;
-        justify-content: space-around;
-        width:35%;
-    }
-    .nav-links li {
-        list-style: none;
-    }
-    .nav-links a{
-        color: rgb(255, 123, 0);
-        text-decoration: none;
-        letter-spacing: 2px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .meniu{
-        display: none;
-        cursor: pointer;
-    }
-    .meniu div{
-        width: 25px;
-        height: 3px;
-        background-color:  rgb(255, 123, 0);
-        margin: 5px;
-         transition: all 0.3s ease;
-    }
-    .ian-gras{
-        font-size: small;
-        display: flex;
-        left: 0px;
-        top: 100%;
-        bottom: 0px;
-        width: 100%;
-        background-color:#111b30;
-        color: rgb(255, 123, 0);
-        justify-content: center;
-        align-items: center;
-        flex-direction:column;
-        text-align: center;
-        padding: 10px;
-        font-family: 'Nova Mono', monospace;
-    
-        }
-        .dot {
-            height: 35px;
-            width: 35px;
-            border-radius: 50%;
-            display: inline-block;
-          }
+nav {
+    margin: 40px 0 40px 0;
+}
 
-          #timer{
-            font-size: 4vh;
-            font-family: 'Silkscreen', cursive;
-            color: #111b30 ;
-          }
-    @media screen and (max-width:1024px){
-        .nav-links{
-            display: flex;
-            justify-content: space-around;
-            width:55%;
-        }   
-    }
-    
+footer {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #111b30;
+    color: #ff7b00;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    font-family: "Nova Mono", monospace;
+}
 
-    @media screen and (max-width:768px){
-    
-        .nav-links{
-        position: absolute;
-        right: 0px;
-        height: 100vh;
-        top: 0px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        width: 40%;
-        transform: translateX(100%);
-        transition: transform 0.5s cubic-bezier(0.50, -1, 1, 1);
-        background-color:#111b30;
-        z-index: -1;
-        }
-        #lp{
-            display: none;
-        }
-        .nav-links li{
-        opacity: 0;
-        }
-        .meniu {
-        display: block;
-        }
-        .nav-active{
-        transform: translateX(0%);
-        }
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Nova Mono", monospace;
+}
 
-        @keyframes fade {
-        from{
-        opacity: 0;
-        transform: translateX(50px);
-        }
-        to{
-        opacity: 1;
-        transform: translateX(0px);
-        }
+div.container h1 {
+    color: #000000;
+    text-align: center;
+}
 
-        }
-        .toggle .sus {
-        transform: rotate(-45deg) translate(-5px,6px);
-        }
-        .toggle .mijloc {
-        opacity: 0;
-        }
-        .toggle .jos {
-        transform: rotate(45deg) translate(-5px,-6px);
-        }
-    }
+.container{
+    margin: 2.5%; 
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    width: 95%;
+}
 
-  
+
+article h1{
+    text-align: center;
+    font-size: 24px;
+    margin-top:30px;
+    color: #111b30;
+}
+
+article p{
+    border: 1px;
+    border-color:#000000;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: #ffffff;
+    width: 90vw;
+    margin: 1vh 0 1vh 0;
+    font-size: 18px;
+    max-height: 30vh;
+}
+
+article {
+    color: #000000;
+    margin: 3vh 0 3vh 0;
+    background-image: url(assets/background-custom.jpg);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend{
+    font-size: 19px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+form{
+    font-family: "Nova Mono", monospace;
+}
+
+input{
+    width: 86vw;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Nova Mono", monospace;
+    border: 1px;
+    border-color:#000000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(-45deg, #ffa600, #ee7752, #ee7752, #111b30,#1cc2ff, #1cc2ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #ffffff;
+}
+
+/* white space 9px*/
+
+#icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+}
+
+.align{
+    display: flex;
+    justify-content: center;
+    width: 86vw;
+    margin: 9px 0 9px 0;
+}
+
+#email{
+    width: 71.8vw;
+}
+
+#clasa{
+    width: 12vw;
+    margin-left: 9px;
+}
+
+.in-line{
+    width: 86vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#telefon{
+    margin: 9px 0 0 0;
+}
+
+#proiect{
+    margin: 9px 0 0 0;
+}
+
+#descriere{
+    padding: 4px;
+    min-height: 120px;
+    max-width: 86vw;
+    min-width: 86vw;
+    margin: 9px 0 9px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px;
+    border-color:#000000;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: "Nova Mono", monospace;
+}
+
+#sustinator{
+    width: 60vw;
+    margin-right: 9px;
+}
+
+#suporter{
+    width: 26vw;
+}
+
+.margin{
+    display: flex;
+    flex-direction: column;
+}
+
+#pic1 {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    max-height: 40vh;
+    max-width: 80vw;
+    height: auto;
+}
+
+#FAQ{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    height: auto;
+    font-size:22px;
+}

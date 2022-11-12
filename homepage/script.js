@@ -1,21 +1,27 @@
-const animatie = () =>{
-    const meniu = document.querySelector('.meniu');
-    const nav = document.querySelector('.nav-links');
-    const navLink = document.querySelectorAll('.nav-links li')
+$(document).ready(function() {
+    var max_fields = 4;
+    var wrapper = $(".container1");
+    var add_button = $(".add_form_field");
 
-   meniu.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-        navLink.forEach((link,index) => {
-        if(link.style.animation){
-            link.style.animation = ``;
+    var x = 1;
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        if (x < max_fields) {
+            x++;
+           var html = '<div  class="align"><input type="text" placeholder="Participantul '+x+'" required> <img id="icon" class="delete" src="assets/minus.svg"></div>'
+            $(wrapper).append(html); //add input box
         } else {
-            link.style.animation = `fade 0.5s ease forwards ${index/7 + 0.4}s`
+            alert('Maxim 4 participanti !')
         }
+    });
 
-        });
-        meniu.classList.toggle('toggle');
-   });
-}
+    $(wrapper).on("click", ".delete", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+        x--;
+    })
+});
+
 var countDownDate = new Date("Nov 27, 2022 18:00:00").getTime();
 
 var x = setInterval(function() {
@@ -33,8 +39,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-  document.getElementById("timer").innerHTML = "Starts in: <br> " + days + "D " + hours + "H "
-  + minutes + "M " + seconds + "S ";
+  document.getElementById("timer").innerHTML = "Evenimentul incepe in: <br> " + days + " Zile " + hours + " Ore "
+  + minutes + " Minute " + seconds + " Secuunde ";
 
 
   if (distance < 0) {
@@ -43,7 +49,3 @@ var x = setInterval(function() {
   }
 
 }, 1000);
-
-    animatie();
-
-
