@@ -8,7 +8,7 @@ $(document).ready(function() {
         e.preventDefault();
         if (x < max_fields) {
             x++;
-           var html = '<div  class="align"><input type="text" placeholder="Participantul '+x+'" required> <img id="icon" class="delete" src="assets/minus.svg"></div>'
+           var html = '<div class="part"><input id="part1"type="text" placeholder="Participantul '+x+'" required> <img id="icon" class="delete" src="assets/minus.svg"><input id="email" type="email" placeholder="Email" required><input id="clasa" type="text" placeholder="Clasa" required><input id="telefon" type="tel" placeholder="Numar de telefon" required></div>'
             $(wrapper).append(html); //add input box
         } else {
             alert('Maxim 4 participanti !')

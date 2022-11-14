@@ -148,33 +148,43 @@ input[type="submit"] {
 #icon{
     width: 40px;
     height: 40px;
-    margin-left: 4px;
-}
-
-.align{
-    display: flex;
-    justify-content: center;
-    width: 86vw;
-    margin: 9px 0 9px 0;
+    grid-column-start:2;
+    grid-row-end: 2;
+    justify-self: end;
 }
 
 #email{
-    width: 71.8vw;
+    width: 67vw;
+    grid-column-start:1;
+    grid-row-start: 2;
+    justify-self: start;
 }
 
 #clasa{
-    width: 12vw;
-    margin-left: 9px;
+    width: 17vw;
+    grid-column-start:2;
+    grid-row-start: 2;
+    justify-self: end;
 }
 
-.in-line{
+#part1{
+    grid-column-start:1;
+    grid-row-start: 1;
+    width: calc(86vw - 49px);
+    justify-self: start;
+}
+
+.part{
     width: 86vw;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    margin-top: 20px;
+    row-gap: 9px;
 }
 
 #telefon{
-    margin: 9px 0 0 0;
+    grid-row-start: 3;
 }
 
 #proiect{
@@ -197,17 +207,26 @@ input[type="submit"] {
 }
 
 #sustinator{
-    width: 60vw;
+    width: 58vw;
     margin-right: 9px;
+    justify-self:start;
 }
 
 #suporter{
-    width: 26vw;
+    width: 25vw;
+    justify-self:end;
 }
 
 .margin{
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+}
+
+.in-line{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
 }
 
 #pic1 {
