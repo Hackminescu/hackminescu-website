@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nova+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@600;700;900&display=swap');
 
 * {
     margin: 0px;
@@ -15,113 +15,194 @@ body {
     height: 100%;
     transform: translate3d(0, 0, 0);
 
+
+}
+
+h1 {
+    letter-spacing: 0px;
+}
+
+/* Infinite gradient animation */
+@keyframes gradient2 {
+    to {
+        background-position: 100% 100%;
+      }
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% { 
+        width: 0 ;
+    }
+    100% { 
+        width: 93% ;
+    }
+  }
+  
+/* Blinking cursor animation */
+@keyframes cursor{
+    20% { border-color: transparent }
+  }
+/* --- */
+
+
+
+/* Top part of the website, the header */
+#intro {
+    height: auto;
+    border-radius: 0 0 20px 20px;
     background: linear-gradient(
         -45deg,
-        #ffa600,
-        #ee7752,
-        #ee7752,
-        #111b30,
-        #1cc2ff,
-        #1cc2ff
+        #ff3f00,
+        #ff3f00,
+        #0048ff,
+        #0048ff,
+        #ff3f00,
+        #ff3f00
     );
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-size: 500% 500%;
+    animation: gradient2 6s cubic-bezier(.27,.41,.74,.61) infinite;
+    padding-bottom: 20px;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+#intro>picture {
+    padding-top: 50px;
 }
 
-nav {
-    margin: 40px 0 40px 0;
+#intro>*{
+    margin-bottom: 30px;
 }
 
-footer {
-    display: flex;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    background-color: #111b30;
-    color: #ff7b00;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/* Announcements container */
+.container h2 {
     text-align: center;
-    padding: 10px;
-    font-family: "Nova Mono", monospace;
+    font-size: 20px;
 }
+
+#announcement-highlight {
+    color: #ff3f00;
+    font-weight: 800;
+}
+   
+div.container h1 {
+    color: #000000;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    border-right: 2px solid #000000; 
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+      typing 2s,
+      cursor 1s infinite;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    width: 95%;
+    background: #ffffff;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+/* --- */
+
+
+
 
 main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: "Nova Mono", monospace;
+    font-family: 'Noto Sans Display', sans-serif;
 }
 
-div.container h1 {
-    color: #000000;
-    text-align: center;
-}
-
-.container{
-    margin: 2.5%; 
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 16px;
-    width: 95%;
-}
-
-
-article h1{
-    text-align: center;
-    font-size: 24px;
-    margin-top:30px;
-    color: #111b30;
-}
-
-article p{
-    border: 1px;
-    border-color:#000000;
-    border-style: solid;
-    border-radius: 10px;
-    padding: 4px;
-    background-color: #ffffff;
-    width: 90vw;
-    margin: 1vh 0 1vh 0;
-    font-size: 18px;
-    max-height: 30vh;
-}
-
+/* Second writing part */
 article {
     color: #000000;
-    margin: 3vh 0 3vh 0;
-    background-image: url(assets/background-custom.jpg);
-    background-size: cover;
+    margin: 10vh 0;
+    /* background-image: url(assets/Background_Website.jpg);
+    background-size: cover; */
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border-radius: 15px;
 }
 
-legend{
-    font-size: 19px;
-    margin-bottom: 12px;
+article h1 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Header */
+article h2{
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+    line-height: 40px;
     letter-spacing: -1px;
 }
 
+article p{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.event {
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    width: 95%;
+    
+    background: linear-gradient(
+        90deg,
+        #ff3f00,
+        #ff3f00,
+        #ff8400,
+        #ff8400,
+        #ff3f00,
+        #ff3f00
+    );
+    background-size: 600% 600%;
+    animation: gradient2 5s cubic-bezier(.27,.41,.74,.61) infinite;
+}
+/* --- */
+
+
+/* --- */
+/* Forms styling */
 form{
-    font-family: "Nova Mono", monospace;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/* Styling of the entire form area */
+#forms-div {
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(
+        -45deg,
+        #ff3f00,
+        #ff3f00,
+        #ff3f00,
+        #0048ff,
+        #0048ff,
+        #fff,
+        #fff,
+        #ff3f00,
+        #ff3f00,
+        #ff3f00
+    );
+    background-size: 500% 500%;
+    animation: gradient2 3s cubic-bezier(.27,.41,.74,.61) infinite;
+    padding: 30px 0;
 }
 
 input{
@@ -129,85 +210,164 @@ input{
     height: 40px;
     font-size: 18px;
     text-align: center;
-    font-family: "Nova Mono", monospace;
+    font-family: 'Noto Sans Display', sans-serif;
+
     border: 1px;
     border-color:#000000;
     border-style: solid;
     border-radius: 10px;
 }
 
-input[type="submit"] {
-    background: linear-gradient(-45deg, #ffa600, #ee7752, #ee7752, #111b30,#1cc2ff, #1cc2ff);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    color: #ffffff;
+
+.container {
+    display: grid;
 }
 
-/* white space 9px*/
+.container1 {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+#part1{
+    grid-column-start:1;
+    grid-row-start: 1;
+    width: calc(84vw - 50px);
+    justify-self: start;
+    position: absolute;
+}
+
+.part{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    margin-top: 20px;
+    row-gap: 2px;
+    border-radius: 15px;
+    border: 10px #ff3f00 solid ;
+    background-color: #ff3f00;
+    position: relative;
+}  
+
+
+.participant-form {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.participant-form h1 {
+    font-size: 40px;
+    line-height: 35px;
+    letter-spacing: -1px;
+}
 
 #icon{
+    margin: 0 20px;
     width: 40px;
     height: 40px;
-    margin-left: 4px;
-}
-
-.align{
-    display: flex;
-    justify-content: center;
-    width: 86vw;
-    margin: 9px 0 9px 0;
+    grid-column-start:2;
+    grid-row-end: 2;
+    background-color: #ffffff;
+    border-radius: 100%;
 }
 
 #email{
-    width: 71.8vw;
+    width: 100%;
+    grid-column-start:1;
+    grid-row-start: 2;
+    justify-self: start;
 }
 
 #clasa{
-    width: 12vw;
-    margin-left: 9px;
-}
-
-.in-line{
-    width: 86vw;
-    display: flex;
-    flex-direction: row;
+    width: 90%;
+    grid-column-start:2;
+    grid-row-start: 2;
+    justify-self: end;
 }
 
 #telefon{
-    margin: 9px 0 0 0;
+    grid-row-start: 3;
+}
+/* --- */
+
+/* Project details registration tab */
+#project-details {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Project name input */
 #proiect{
     margin: 9px 0 0 0;
+    width: 100%;
 }
 
+/* Project description box */
 #descriere{
-    padding: 4px;
-    min-height: 120px;
-    max-width: 86vw;
-    min-width: 86vw;
-    margin: 9px 0 9px 0;
-    font-size: 18px;
+    margin: 9px 0 25px 0;
+    padding: 5px;
+    width: 100%;
     text-align: left;
+    font-size: 18px;
     border: 1px;
     border-color:#000000;
     border-style: solid;
     border-radius: 10px;
-    font-family: "Nova Mono", monospace;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/* Registration button for participants */
+#register-button {
+    margin: 0 auto;
+    width: 60%;
+    height: 80px;
+    font-size: 30px;
+    background-color: #ff3f00;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+}
+/* --- */
+
+
+
+/* "I want to be a supporter" fields */
+
+form legend {
+    margin-bottom: 10px;
 }
 
 #sustinator{
-    width: 60vw;
+    width: 75vw;
     margin-right: 9px;
+    justify-self:start;
+    text-align: left;
+    border-radius: 10px 0 0 10px!important;
+    padding-left: 5px;
+    padding-right: 15vw;
 }
 
 #suporter{
-    width: 26vw;
+    text-align: center;
+    width: 25vw;
+    background-color: #b0b0b0;
+    color: white;
+    border-radius: 0px 10px 10px 0!important;
+    border-left: none;
 }
 
-.margin{
-    display: flex;
-    flex-direction: column;
+.in-line{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
 }
 
 #pic1 {
@@ -216,8 +376,8 @@ input[type="submit"] {
 }
 
 #logo {
-    max-height: 40vh;
-    max-width: 80vw;
+    max-height: 50vh;
+    max-width: 95vw;
     height: auto;
 }
 
@@ -227,4 +387,68 @@ input[type="submit"] {
     text-align: center;
     height: auto;
     font-size:22px;
+}
+
+/* --- */
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+
+    padding: 30px;
+
+    color: #ff3f00;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+/* --- */
+
+
+/* PC code */
+@media (min-width: 1200px) {
+    #intro >* {
+        width: 50%;
+    }
+    #intro picture {
+        width: 100%;
+    }
+
+    .event {
+        width: 50%;
+    }
+
+    .participant-form {
+        width: 50%;
+    }
+
+    #part1{
+        width: 38vw;
+    }
+
+    #telefon{
+        grid-row-start: 3;
+        width: 47vw;
+    }
+
+    #project-details {
+        width: 80%;
+    }
+
+    #sustinator{
+        width: 100%;
+    }
+    
+    #suporter{
+        width: 100%;
+    }
+
+    .supporter-form {
+        width: 50%;
+    }
+    
 }

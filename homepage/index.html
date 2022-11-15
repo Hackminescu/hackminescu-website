@@ -8,81 +8,94 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/HM.ico" type="image/x-icon" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>HACKMINESCU</title>
+    <title>HackMinescu</title>
 </head>
 <body>
-
-    <nav>
+    <div id="intro">
         <picture id="pic1">
             <img id="logo" src="assets/logo.png" alt="LOGO" />
         </picture>
-    </nav>
 
 
-    <main>
         <div class="container">
-            <h1>Ce este HACKMINESCU?</h1>
+            <h1>Ce este HackMinescu?</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, reprehenderit beatae sapiente expedita, consectetur
-                cupiditate quod eaque quisquam quidem fugit aliquid a cum?
-                Vel quisquam voluptatem laborum fuga provident quos.
+                "Evenimentul in care programatorii isi exprima pasiunea."
+                <br><br>
+                Hackathon-ul Colegiului National Mihai Eminescu, organizat cu scopul de a pune in lumina reflectoarelor talentul ascuns si creativitatea pasionatilor de tehnologie.
             </p>
         </div>
 
+        <div class="container">
+            <h2 id="announcement">⏳ Inscrierile se inchid pe <strong id="announcement-highlight">28.11</strong></h2>
+        </div>
+    </div>
 
 
+    <main>
         <article>
-            <h1>Desfasurarea envenimentului</h1>
-            <div class="event"><p id="timer"></p></div>
-            <div class="event"><p>Proiectele pot fi inregistrate pana pe (7zile inainte de incepere)</p></div>
-            <div class="event"><p>DE ALES ALT FONT OK?</p></div>
+            <!-- <h2>Desfasurarea envenimentului</h2> -->
+            <h1>Cum se desfasoara evenimentul?</h1>
+            <div class="event">
+                <p>
+                    Evenimentul consta in prezentarea unui proiect de programare, realizat individual sau in echipa de maxim 4 persoane, indiferent de tematica proiectului sau limbajul de programare folosit.
+                    <br><br>
+                    Proiectele se vor prezenta fizic, in cadrul colegiului, unui public format din sustinatori.
+                </p>
+            </div>
+            <br>
+            <br>
 
-            <p id="FAQ">FAQ</p>
-            <div class="event"><p><b>Ce tip de proiecte pot fi inscrise ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
-            <div class="event"><p><b>Intrebari frecvente 2 ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
-            <div class="event"><p><b>Intrebari frecvente 3 ?</b><br>Orice proiect realizat de tine in diverse limbaje de programare!</p></div>
-            <div class="event"></div>
+            <h1>Cine poate participa?</h1>
+            <div class="event">
+                <p>
+                    Orice elev sau echipa, indiferent de experienta acestora in domeniu, ce au realizat un proiect de programare, il pot prezenta in cadrul evenimentului.
+                </p>
+            </div>
         </article>
 
 
-
-        <form class="container" id="partReg">
-            <legend>Vreau sa imi prezint proiectul!</legend>
+        <div id="forms-div">
+        <form class="participant-form">
+            <h1>Vreau sa imi <br> prezint proiectul!</h1>
 
             <div class="container1">
-                <div class="align"><input type="text" placeholder="Participantul 1" name="participant1"><img class="add_form_field" 
-                        id="icon" src="assets/plus.svg"></div>
+                <div class="part">
+                    <input id="part1" type="text" placeholder="Participantul 1" name="participant1" required>
+                    <img class="add_form_field" id="icon" src="assets/plus.svg">
+                    <input id="email" type="email" placeholder="Email" required>
+                    <input id="clasa" type="text" placeholder="Clasa" required>
+                    <input id="telefon" type="tel" placeholder="Numar de telefon" required>
+                </div>
+
             </div>
-            <div class="in-line">
-                <input id="email" type="email" name="email1" placeholder="Email" required>
-                <input id="clasa" type="text" name="class1" placeholder="Clasa" required>
+            <div id="project-details">
+                <input id="proiect" type="text" placeholder="Nume proiect" required>
+                <textarea id="descriere" cols="48" rows="3" placeholder="Descriere proiect"></textarea>
+                <input type="submit" value="Inscrie-te!" id="register-button">  
             </div>
-            <div class="margin">
-                <input id="telefon" type="tel" name="phone1" placeholder="Numar de telefon" required>
-                <input id="proiect" type="text" name="project-name" placeholder="Nume proiect" required>
-                <textarea id="descriere" name="project-desc" cols="48" rows="3"></textarea>
-            </div>
-            <input type="submit" value="Inscrie-te!">
         </form>
+        <br>
 
 
 
-        <form class="container">
-            <legend>Vreau sa imi sustin colegii!</legend>
+        <form class="container supporter-form">
+            <legend>Vreau sa fiu sustinator!</legend>
             <div class="in-line">
-                <input id="sustinator" type="text" placeholder="Numele tau" required>
+                <input id="sustinator" type="text" placeholder="Email" required>
                 <input id="suporter" type="submit" value="Sustine!">
             </div>
         </form>
+        </div>
     </main>
 
 
 
     <footer>
-        <p><b>HACKMINESCU© </b>since 2022.</p>
-        <p>All rights reserverd.</p>
-        <p>Eveniment organizat de<br />Colegiul National <i>Mihai Eminescu</i></p>
+        <p><strong>HackMinescu</strong>© since 2022.</p>
+        <p>Eveniment organizat de
+            <br/>Colegiul National <i>Mihai Eminescu</i>
+        </p>
     </footer>
 
 
