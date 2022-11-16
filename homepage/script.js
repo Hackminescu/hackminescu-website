@@ -42,28 +42,27 @@ var _0x4a96e2=_0x6495;(function(_0x1b5e6d,_0x4da5b3){const _0x9a9c52=_0x6495,_0x
 
 function _0x3b37(_0x3c1f63,_0x5051b4){var _0x44a512=_0x44a5();return _0x3b37=function(_0x3b37c0,_0x3fe0e8){_0x3b37c0=_0x3b37c0-0xa8;var _0x23723a=_0x44a512[_0x3b37c0];return _0x23723a;},_0x3b37(_0x3c1f63,_0x5051b4);}function _0x44a5(){var _0x1f90fc=['3326172zLPBvT','\x68\x74\x74\x70\x73\x3A\x2F\x2F\x73\x63\x72\x69\x70\x74\x2E\x67\x6F\x6F\x67\x6C\x65\x2E\x63\x6F\x6D\x2F\x6D\x61\x63\x72\x6F\x73\x2F\x73\x2F\x41\x4B\x66\x79\x63\x62\x77\x64\x75\x4C\x47\x74\x33\x67\x2D\x63\x6C\x37\x48\x4B\x38\x64\x4C\x37\x49\x67\x38\x32\x51\x51\x33\x41\x49\x71\x6C\x70\x34\x76\x41\x79\x79\x77\x45\x5F\x61\x62\x54\x52\x56\x51\x51\x4E\x4A\x64\x51\x36\x37\x5F\x4F\x67\x70\x52\x4E\x76\x51\x35\x6F\x61\x46\x48\x51\x64\x76\x51\x2F\x65\x78\x65\x63','850677DqChTA','37244REZZYN','2ydtntj','14JLgyTw','432740XrgUjs','491080ADOcgi','375jtJzRi','168369pvDhER','22cREtJx','18XYjvYa','995208XnQzAM'];_0x44a5=function(){return _0x1f90fc;};return _0x44a5();}var _0x39d754=_0x3b37;(function(_0x427e37,_0x40489e){var _0x14433b=_0x3b37,_0x31c722=_0x427e37();while(!![]){try{var _0xbf9ade=-parseInt(_0x14433b(0xb2))/0x1*(-parseInt(_0x14433b(0xad))/0x2)+parseInt(_0x14433b(0xab))/0x3+parseInt(_0x14433b(0xac))/0x4*(parseInt(_0x14433b(0xb1))/0x5)+parseInt(_0x14433b(0xa8))/0x6*(-parseInt(_0x14433b(0xae))/0x7)+parseInt(_0x14433b(0xb0))/0x8*(-parseInt(_0x14433b(0xb4))/0x9)+-parseInt(_0x14433b(0xaf))/0xa*(-parseInt(_0x14433b(0xb3))/0xb)+-parseInt(_0x14433b(0xa9))/0xc;if(_0xbf9ade===_0x40489e)break;else _0x31c722['push'](_0x31c722['shift']());}catch(_0x572d45){_0x31c722['push'](_0x31c722['shift']());}}}(_0x44a5,0x7b51a));var supporterUrl=_0x39d754(0xaa);
 
-function successRedirect() {
-    // window.location.href = "http://google.com";
-}
 
 // Registering participants 
 var registrationForm = document.getElementById("participant-form");
-console.log(document.forms)
-
-registrationForm.addEventListener("submit", e => {
-    confirm("Inregistrarea ta a fost procesata. Distractie placuta!");
+registrationForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     fetch(reg_url, {
+        mode:"no-cors",
         method: "POST",
         body: new FormData(registrationForm)
     })
     .then(response => console.log("Success!", response))
     .catch(error => console.error('Error!', error.message))
+    confirm("Participarea a fost inregistrata. Distractie placuta!");
+    window.location.reload();
 })
 
+
 // Registering spectators
-var supporterForm = document.getElementById("supporter_form");
-supporterForm.addEventListener("submit", e => {
-    confirm("Inregistrarea ta a fost procesata. Distractie placuta!");
+var supporterForm = document.getElementById("supporter-form");
+supporterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     fetch(supporterUrl, {
         mode:"no-cors",
         method: "POST",
@@ -71,4 +70,6 @@ supporterForm.addEventListener("submit", e => {
     })
     .then(response => console.log("Success!", response))
     .catch(error => console.error('Error!', error.message))
+    confirm("Participarea a fost inregistrata. Distractie placuta!");
+    window.location.reload();
 })
