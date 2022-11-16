@@ -72,19 +72,20 @@
             <div id="project-details">
                 <input id="proiect" type="text" placeholder="Nume proiect" name="project-name" required>
                 <textarea id="descriere" cols="48" rows="3" placeholder="Descriere proiect" name="project-desc" required></textarea>
-                <input type="submit" value="Inscrie-te!" id="register-button">  
+                <input type="submit" value="Inscrie-te!" id="register-button" onclick="successRedirect()">  
             </div>
         </form>
         <br>
 
 
 
-        <form class="container" id="supporter_form">
+        <form class="container" id="supporter-form">
             <legend>Vreau sa fiu sustinator!</legend>
             <div class="in-line">
                 <input id="sustinator" type="email" placeholder="Email" name="email" required>
                 <input id="suporter" type="submit" value="Sustine!">
             </div>
+            <p>*In limita locurilor disponibile</p>
         </form>
         </div>
     </main>

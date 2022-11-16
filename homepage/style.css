@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;600;700;900&display=swap');
 
 * {
     margin: 0px;
@@ -14,8 +14,7 @@ body {
     width: 100%;
     height: 100%;
     transform: translate3d(0, 0, 0);
-
-
+    font-weight: 600;
 }
 
 h1 {
@@ -182,7 +181,7 @@ article p{
 
 /* --- */
 /* Forms styling */
-form{
+form {
     font-family: 'Noto Sans Display', sans-serif;
 }
 
@@ -208,7 +207,7 @@ form{
     padding: 30px 0;
 }
 
-input{
+input {
     width: 86vw;
     height: 40px;
     font-size: 18px;
@@ -219,6 +218,11 @@ input{
     border-color:#000000;
     border-style: solid;
     border-radius: 10px;
+    font-weight: 600;
+}
+
+textarea {
+    font-weight: 600;
 }
 
 
@@ -344,8 +348,9 @@ input{
 
 /* "I want to be a supporter" fields */
 
-form legend {
+#supporter-form legend {
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 #sustinator{
@@ -365,6 +370,12 @@ form legend {
     color: white;
     border-radius: 0px 10px 10px 0!important;
     border-left: none;
+}
+
+#supporter-form p {
+    padding-top: 4px;
+    font-weight: 100;
+    font-size: 14px;
 }
 
 .in-line{
@@ -450,7 +461,7 @@ footer {
         width: 100%;
     }
 
-    #supporter_form {
+    #supporter-form {
         width: 50%;
     }
     
