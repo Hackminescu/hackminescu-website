@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="assets/HM.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/website-icon.ico" type="image/x-icon" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>HackMinescu</title>
 </head>
@@ -56,22 +56,22 @@
 
 
         <div id="forms-div">
-        <form class="participant-form">
+        <form id="participant-form">
             <h1>Vreau sa imi <br> prezint proiectul!</h1>
 
             <div class="container1">
                 <div class="part">
                     <input id="part1" type="text" placeholder="Participantul 1" name="participant1" required>
                     <img class="add_form_field" id="icon" src="assets/plus.svg">
-                    <input id="email" type="email" placeholder="Email" required>
-                    <input id="clasa" type="text" placeholder="Clasa" required>
-                    <input id="telefon" type="tel" placeholder="Numar de telefon" required>
+                    <input id="email" type="email" placeholder="Email" name="email1" required>
+                    <input id="clasa" type="text" placeholder="Clasa" name="class1" required>
+                    <input id="telefon" type="tel" placeholder="Numar de telefon" name="phone1" required>
                 </div>
 
             </div>
             <div id="project-details">
-                <input id="proiect" type="text" placeholder="Nume proiect" required>
-                <textarea id="descriere" cols="48" rows="3" placeholder="Descriere proiect"></textarea>
+                <input id="proiect" type="text" placeholder="Nume proiect" name="project-name" required>
+                <textarea id="descriere" cols="48" rows="3" placeholder="Descriere proiect" name="project-desc" required></textarea>
                 <input type="submit" value="Inscrie-te!" id="register-button">  
             </div>
         </form>
@@ -79,10 +79,10 @@
 
 
 
-        <form class="container supporter-form">
+        <form class="container" id="supporter_form">
             <legend>Vreau sa fiu sustinator!</legend>
             <div class="in-line">
-                <input id="sustinator" type="text" placeholder="Email" required>
+                <input id="sustinator" type="email" placeholder="Email" name="email" required>
                 <input id="suporter" type="submit" value="Sustine!">
             </div>
         </form>

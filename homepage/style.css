@@ -45,6 +45,9 @@ h1 {
   }
 /* --- */
 
+.hidden {
+    visibility: hidden;
+}
 
 
 /* Top part of the website, the header */
@@ -252,7 +255,7 @@ input{
 }  
 
 
-.participant-form {
+#participant-form {
     width: 95%;
     margin: 0 auto;
     background-color: #ffffff;
@@ -262,7 +265,7 @@ input{
     margin-bottom: 20px;
 }
 
-.participant-form h1 {
+#participant-form h1 {
     font-size: 40px;
     line-height: 35px;
     letter-spacing: -1px;
@@ -422,7 +425,7 @@ footer {
         width: 50%;
     }
 
-    .participant-form {
+    #participant-form {
         width: 50%;
     }
 
@@ -447,7 +450,7 @@ footer {
         width: 100%;
     }
 
-    .supporter-form {
+    #supporter_form {
         width: 50%;
     }
     
